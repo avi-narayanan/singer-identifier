@@ -3,5 +3,5 @@ One shot learning to identify the voice of a singer using transfer learning base
 
 ## References
 * Keras Implementations of VGGish : https://github.com/DTaoo/VGGish
-* Gemmeke, J. et. al., AudioSet: An ontology and human-labelled dataset for audio events, ICASSP 2017
-* Hershey, S. et. al., CNN Architectures for Large-Scale Audio Classification, ICASSP 2017
+* Gemmeke, J. et. al., [AudioSet: An ontology and human-labelled dataset for audio events](https://research.google.com/pubs/pub45857.html), ICASSP 2017
+* Hershey, S. et. al., [CNN Architectures for Large-Scale Audio Classification](https://research.google/pubs/pub45611/), ICASSP 2017
