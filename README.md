@@ -1,6 +1,21 @@
 # Singer Identifier
 One shot learning to identify the voice of a singer using transfer learning based on VGGish architecture
 
+## Problem Statement
+As a singer, I tend to record a lot of songs (bhajans specificaly, [songs like these](https://www.youtube.com/watch?v=0w6xY3CN-j8)) on my phone, sang by other singers and myself alike. The result is a jumble of songs with generic names like "My Recording 67.wav". My loved ones would often ask me to send songs that I have sung and I found it very difficult to find anything in this mess. 
+I took the opportunity to solve this problem with machine learning. 
+
+## Methodology
+
+### TL;DR
+I used voice recordings that I had gathered on my phone over the last year (total of ~350 bhajans, ~80 were sang by me). I developed a [simple html/js tool](https://github.com/avi-narayanan/singer-identifier/tree/master/Song%20Annotator) that would help annotate the songs, shared subsets of the data to close friends and family members and within a few weeks had a usable dataset. I then converted the dataset into 4 second spectrograms that could be fed into a deep neural net based on VGGish model. 
+
+I used two different methods to identify my voice in a given snipet of audio
+- Generalizable model - <br />Used a siamese network to train a model that generates a "fingerprint" of a given singer. New audio samples are compared to the fingerprint using a distance metric and is classified as my voice if the distance is within a defined threshold
+- Non Generalizable model 
+  - Binary Classifier - Trained a model that predicts whether a given spectrogram is my voice or not
+  - Multi-class Classifier - Trained a model that that predicts whether a given spectrogram is one or many different singers present in the dataset
+
 ## References
 * Keras Implementations of VGGish : https://github.com/DTaoo/VGGish
 * Gemmeke, J. et. al., [AudioSet: An ontology and human-labelled dataset for audio events](https://research.google.com/pubs/pub45857.html), ICASSP 2017
