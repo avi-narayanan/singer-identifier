@@ -20,9 +20,9 @@ I used two different methods to identify my voice in a given snipet of audio
 For details, checkout the [blog]().
 
 # Future Work
-- [ ] Add more variety to the dataset and retrain (more female singers, more songs without any percussion and supporting instruments)
-- [ ] Evaluate different methods of generating a fingerprint for a singer
-- [ ] Deploy model as a consumable API
+- Add more variety to the dataset and retrain (more female singers, more songs without any percussion and supporting instruments)
+- Evaluate different methods of generating a fingerprint for a singer
+- Deploy model as a consumable API
 
 # References
 * Keras Implementations of VGGish : https://github.com/DTaoo/VGGish
