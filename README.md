@@ -5,7 +5,7 @@ I took the opportunity to solve this problem with machine learning.
 ## Methodology
 
 ### TL;DR
-I used voice recordings that I had gathered on my phone over the last year (total of ~350 bhajans, ~80 were sang by me, ~20 different singers). I developed a [simple html/js tool](https://github.com/avi-narayanan/singer-identifier/tree/master/Song%20Annotator) that would help annotate the songs, shared subsets of the data to close friends and family members and within a few weeks I had a usable dataset. I then converted the dataset into 4 second spectrograms that could be fed into a deep neural net based on VGGish model. 
+I used voice recordings that I had gathered on my phone over the last year (total of ~350 bhajans, ~80 were sang by me, ~20 different singers). I developed a [simple html/js tool](https://github.com/avi-narayanan/singer-identifier/tree/master/Song%20Annotator) that would help annotate the songs, shared subsets of the data to friends and family members and within a few weeks I had a usable dataset. I then converted the dataset into 4 second spectrograms that could be fed into a deep neural net based on VGGish model. 
 
 I used two different methods to identify my voice in a given snipet of audio
 - Generalizable model - <br />Used a siamese network to train a model that generates a "fingerprint" of a given singer. A new audio sample is compared to the fingerprint using a distance metric and is classified as my voice if the distance is within a defined threshold
@@ -17,7 +17,7 @@ I used two different methods to identify my voice in a given snipet of audio
 - Non generalizable models performed much better in identifying my voice, >99% accuracy and recall for both binary and multi class classifier
 - The siamese network performed very well at the task of distinguishing between two artists (>90% accuracy on validation data). This however did not directly translate into stellar performance in the one-shot learning task. Using an average of "fingerprints" generated for spectrograms as the my voice's fingerprint, I was able to identify my songs with a ~70% accuracy. 
 
-For details, checkout the [blog]().
+For details, checkout the [blog](https://medium.com/@avi.narayanan/singer-identification-with-deep-learning-f3df64e39e92).
 
 ## Future Work
 - Add more variety to the dataset and retrain (more female singers, more songs without any percussion and supporting instruments)
